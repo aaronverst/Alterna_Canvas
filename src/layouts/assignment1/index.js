@@ -26,7 +26,7 @@ import "./index.css"
 function Overview() {
   return (
     <DashboardLayout>
-      <div className="app__header1">
+      <div>
         <h1 className='app__header-h1'>Select From One of the options below</h1>
       </div>
       <nav className='app__navbar'>
