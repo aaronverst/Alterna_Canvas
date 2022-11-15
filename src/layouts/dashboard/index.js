@@ -1,17 +1,4 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.1.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 
 // @mui material components
 import Grid from "@mui/material/Grid";
@@ -37,7 +24,7 @@ function Dashboard() {
       <DashboardNavbar />
       <MDBox py={3}>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={6} lg={3}>
+          <Grid item xs={12} md={6} lg={6}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
                 color="dark"
@@ -49,46 +36,21 @@ function Dashboard() {
                   amount: "+20%",
                   label: "than lask week",
                 }}
+
               />
             </MDBox>
           </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard
-                icon="leaderboard"
-                title="Today's Users"
-                count="2,300"
-                percentage={{
-                  color: "success",
-                  amount: "+3%",
-                  label: "than last month",
-                }}
-              />
-            </MDBox>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard
-                color="success"
-                icon="store"
-                title="Revenue"
-                count="34k"
-                percentage={{
-                  color: "success",
-                  amount: "+1%",
-                  label: "than yesterday",
-                }}
-              />
-            </MDBox>
-          </Grid>
-          <Link to="/assignment1">
-            <Grid item xs={12} md={6} lg={3}>
+
+
+
+          <Grid item xs={12} md={6} lg={6}>
+            <Link to="/billing">
               <MDBox mb={1.5}>
                 <ComplexStatisticsCard
-                  color="primary"
+                  color="success"
                   icon="star"
                   title="Reward Balance"
-                  count="157"
+                  count="72"
                   percentage={{
                     color: "success",
                     amount: "",
@@ -96,8 +58,9 @@ function Dashboard() {
                   }}
                 />
               </MDBox>
-            </Grid>
-          </Link>
+            </Link>
+          </Grid>
+
         </Grid>
         <MDBox>
           <Grid container spacing={3}>
