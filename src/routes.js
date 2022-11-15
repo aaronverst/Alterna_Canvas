@@ -1,39 +1,3 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-/** 
-  All of the routes for the Material Dashboard 2 React are added here,
-  You can add a new route, customize the routes and delete the routes here.
-
-  Once you add a new route on this file it will be visible automatically on
-  the Sidenav.
-
-  For adding a new route you can follow the existing routes in the routes array.
-  1. The `type` key with the `collapse` value is used for a route.
-  2. The `type` key with the `title` value is used for a title inside the Sidenav. 
-  3. The `type` key with the `divider` value is used for a divider between Sidenav items.
-  4. The `name` key is used for the name of the route on the Sidenav.
-  5. The `key` key is used for the key of the route (It will help you with the key prop inside a loop).
-  6. The `icon` key is used for the icon of the route on the Sidenav, you have to add a node.
-  7. The `collapse` key is used for making a collapsible item on the Sidenav that has other routes
-  inside (nested routes), you need to pass the nested routes inside an array as a value for the `collapse` key.
-  8. The `route` key is used to store the route location which is used for the react router.
-  9. The `href` key is used to store the external links location.
-  10. The `title` key is only for the item with the type of `title` and its used for the title text on the Sidenav.
-  10. The `component` key is used to store the component of its route.
-*/
 
 // Material Dashboard 2 React layouts
 import Dashboard from "layouts/dashboard";
@@ -41,8 +5,17 @@ import Tables from "layouts/tables";
 import Billing from "layouts/billing";
 import Notifications from "layouts/notifications";
 import Profile from "layouts/profile";
-import Assignment1 from "layouts/assignment1";
-import Classes from "layouts/classes";
+import Project2 from "layouts/project2"
+import Module12Quiz from "layouts/module12Quiz"
+import Assignment4 from "layouts/assignment4"
+import Assignment10 from "layouts/assignment10"
+import FinalProjects from "layouts/finalProjects"
+import Assignment11 from "layouts/assignment11"
+import UserInterface from "layouts/UserInterface";
+import SeniorDesign from "layouts/SeniorDesign";
+import Automata from "layouts/Automata";
+import ParallelComputing from "layouts/ParallelComputing";
+import MidCurricularCoop from "layouts/MidCurricularCoop";
 // import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
 // @mui icons
@@ -60,17 +33,17 @@ const routes = [
   {
     type: "collapse",
     name: "Courses",
-    key: "tables",
+    key: "courses",
     icon: <Icon fontSize="small">class</Icon>,
-    route: "/tables",
+    route: "/courses",
     component: <Tables />,
   },
   {
     type: "collapse",
-    name: "Calendar",
+    name: "Points",
     key: "billing",
-    icon: <Icon fontSize="small">CalendarMonth</Icon>,
-    route: "/billing",
+    icon: <Icon fontSize="small">star</Icon>,
+    route: "/points",
     component: <Billing />,
   },
 
@@ -78,7 +51,7 @@ const routes = [
     type: "collapse",
     name: "History",
     icon: <Icon fontSize="small">history</Icon>,
-    route: "/notifications",
+    route: "/history",
     component: <Notifications />,
   },
   {
@@ -86,20 +59,77 @@ const routes = [
     name: "Help",
     key: "help",
     icon: <Icon fontSize="small">help</Icon>,
-    route: "/profile",
+    route: "/help",
     component: <Profile />,
   },
   {
-    key: "assignment1",
-    route: "/assignment1",
-    component: <Assignment1 />,
+    name: "Project 2",
+    key: "project2",
+    route: "/project2",
+    component: <Project2 />,
   },
   {
-    name: "Classes",
-    key: "classes",
-    route: "/classes",
-    component: <Classes />,
+    name: "Module 12 Quiz",
+    key: "module12Quiz",
+    route: "/module12Quiz",
+    component: <Module12Quiz />,
+  },
+  {
+    name: "Assignment 4",
+    key: "assignmnet4",
+    route: "/assignment4",
+    component: <Assignment4 />,
+  },
+  {
+    name: "Assignmnet 10",
+    key: "assignment10",
+    route: "/assignment10",
+    component: <Assignment10 />,
+  },
+  {
+    name: "Final Projects",
+    key: "finalProjects",
+    route: "/finalProjects",
+    component: <FinalProjects />,
+  },
+  {
+    name: "Assignment 11",
+    key: "assignment11",
+    route: "/assignment11",
+    component: <Assignment11 />,
+  },
+  {
+    name: "User Interface I",
+    key: "userinterface",
+    route: "/UserInterface",
+    component: <UserInterface />,
+  },
+  {
+    name: "Senior Design I",
+    key: "seniordesign",
+    route: "/SeniorDesign",
+    component: <SeniorDesign />,
+  },
+  {
+    name: "Automata",
+    key: "automata",
+    route: "/Automata",
+    component: <Automata />,
+  },
+  {
+    name: "Parallel Computing",
+    key: "parallelcomputing",
+    route: "/ParallelComputing",
+    component: <ParallelComputing />,
+  },
+  {
+    name: "Mid-Curricular Co-op Community",
+    key: "midcurricularcoop",
+    route: "MidCurricularCoop",
+    component: <MidCurricularCoop />,
   }
+
+
 ];
 
 export default routes;

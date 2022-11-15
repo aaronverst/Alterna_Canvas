@@ -13,6 +13,8 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
+/* eslint-disable */
+
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
@@ -47,10 +49,11 @@ function Invoice({ date, id, price, noGutter }) {
           {price}
         </MDTypography>
         <MDBox display="flex" alignItems="center" lineHeight={1} ml={3} sx={{ cursor: "pointer" }}>
-          <Icon fontSize="small">picture_as_pdf</Icon>
-          <MDTypography variant="button" fontWeight="bold">
-            &nbsp;PDF
+          <Icon fontSize="small">check</Icon>
+          <MDTypography onClick={adds} variant="button" fontWeight="bold">
+            &nbsp;Submit
           </MDTypography>
+
         </MDBox>
       </MDBox>
     </MDBox>
@@ -68,6 +71,12 @@ Invoice.propTypes = {
   id: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   noGutter: PropTypes.bool,
+};
+
+window.add = 72;
+function adds() {
+  window.add += 1;
+
 };
 
 export default Invoice;

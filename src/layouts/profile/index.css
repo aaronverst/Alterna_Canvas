@@ -12,6 +12,7 @@
 }
 
 .app__header-h1 {
+    display: flex;
 
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -130,12 +131,19 @@
     color: var(--color-white);
 }
 
-.p__opensans {
-    font-family: var(--font-alt);
-    color: var(--color-white);
+.p__opensans link {
     font-weight: 400;
     letter-spacing: 0.04em;
     text-transform: capitalize;
     line-height: 28px;
-    font-size: 24px;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.p__opensan {
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 20px;
+    font-size: 20px;
+    margin-left: 50px;
 }

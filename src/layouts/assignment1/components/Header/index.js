@@ -21,26 +21,63 @@ import PropTypes from "prop-types";
 // @mui material components
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
-import AppBar from "@mui/material/AppBar";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Icon from "@mui/material/Icon";
+// import AppBar from "@mui/material/AppBar";
+// import Tabs from "@mui/material/Tabs";
+// import Tab from "@mui/material/Tab";
+// import Icon from "@mui/material/Icon";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDAvatar from "components/MDAvatar";
+import MDButton from "components/MDButton";
+import MDSnackbar from "components/MDSnackbar";
 
 // Material Dashboard 2 React base styles
 import breakpoints from "assets/theme/base/breakpoints";
 
 // Images
-import burceMars from "assets/images/bruce-mars.jpg";
-import backgroundImage from "assets/images/bg-profile.jpeg";
+import burceMars from "assets/images/UI_Icon.png";
+import backgroundImage from "assets/images/red-background.jpg";
 
 function Header({ children }) {
   const [tabsOrientation, setTabsOrientation] = useState("horizontal");
-  const [tabValue, setTabValue] = useState(0);
+  // const [tabValue, setTabValue] = useState(0);
+
+  const [successSB, setSuccessSB] = useState(false);
+  const [infoSB, setInfoSB] = useState(false);
+  // const [warningSB, setWarningSB] = useState(false);
+  // const [errorSB, setErrorSB] = useState(false);
+  const openSuccessSB = () => setSuccessSB(true);
+  const closeSuccessSB = () => setSuccessSB(false);
+  const openInfoSB = () => setInfoSB(true);
+  const closeInfoSB = () => setInfoSB(false);
+
+  const renderSuccessSB = (
+    <MDSnackbar
+      color="success"
+      icon="check"
+      title="Project 2"
+      content="Your Assignment: Project 2 Has Been Submitted!"
+      dateTime="Just now"
+      open={successSB}
+      onClose={closeSuccessSB}
+      close={closeSuccessSB}
+      bgWhite
+    />
+  );
+  const renderInfoSB = (
+    <MDSnackbar
+      icon="upload"
+      title="Submission Successfull"
+      content="Your file has been uploaded successfully!"
+      dateTime="Just Now"
+      open={infoSB}
+      onClose={closeInfoSB}
+      close={closeInfoSB}
+    />
+  );
+
 
   useEffect(() => {
     // A function that sets the orientation state of the tabs.
@@ -62,7 +99,7 @@ function Header({ children }) {
     return () => window.removeEventListener("resize", handleTabsOrientation);
   }, [tabsOrientation]);
 
-  const handleSetTabValue = (event, newValue) => setTabValue(newValue);
+  // const handleSetTabValue = (event, newValue) => setTabValue(newValue);
 
   return (
     <MDBox position="relative" mb={5}>
@@ -75,8 +112,8 @@ function Header({ children }) {
         sx={{
           backgroundImage: ({ functions: { rgba, linearGradient }, palette: { gradients } }) =>
             `${linearGradient(
-              rgba(gradients.info.main, 0.6),
-              rgba(gradients.info.state, 0.6)
+              rgba(gradients.info.main, 0),
+              rgba(gradients.info.state, 0)
             )}, url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "50%",
@@ -99,42 +136,30 @@ function Header({ children }) {
           <Grid item>
             <MDBox height="100%" mt={0.5} lineHeight={1}>
               <MDTypography variant="h5" fontWeight="medium">
-                Richard Davis
+                Project 2
               </MDTypography>
               <MDTypography variant="button" color="text" fontWeight="regular">
-                CEO / Co-Founder
+                User Interface 1
               </MDTypography>
             </MDBox>
           </Grid>
           <Grid item xs={12} md={6} lg={4} sx={{ ml: "auto" }}>
-            <AppBar position="static">
-              <Tabs orientation={tabsOrientation} value={tabValue} onChange={handleSetTabValue}>
-                <Tab
-                  label="App"
-                  icon={
-                    <Icon fontSize="small" sx={{ mt: -0.25 }}>
-                      home
-                    </Icon>
-                  }
-                />
-                <Tab
-                  label="Message"
-                  icon={
-                    <Icon fontSize="small" sx={{ mt: -0.25 }}>
-                      email
-                    </Icon>
-                  }
-                />
-                <Tab
-                  label="Settings"
-                  icon={
-                    <Icon fontSize="small" sx={{ mt: -0.25 }}>
-                      settings
-                    </Icon>
-                  }
-                />
-              </Tabs>
-            </AppBar>
+            <MDBox p={2}>
+              <Grid container spacing={3}>
+                <Grid item xs={20} sm={10} lg={5}>
+                  <MDButton variant="gradient" color="info" onClick={openInfoSB} fullWidth>
+                    Upload File
+                  </MDButton>
+                  {renderInfoSB}
+                </Grid>
+                <Grid item xs={20} sm={10} lg={5}>
+                  <MDButton variant="gradient" color="success" onClick={openSuccessSB} fullWidth>
+                    Submit Assignment
+                  </MDButton>
+                  {renderSuccessSB}
+                </Grid>
+              </Grid>
+            </MDBox>
           </Grid>
         </Grid>
         {children}

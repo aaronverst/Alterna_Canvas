@@ -15,65 +15,53 @@ Coded by www.creative-tim.com
 
 // Images
 import kal from "assets/images/kal-visuals-square.jpg";
-import marie from "assets/images/marie.jpg";
-import ivana from "assets/images/ivana-square.jpg";
-import team3 from "assets/images/team-3.jpg";
+import Aaron from "assets/images/Headshot.jpg";
+import Ryan from "assets/images/ryanG.jpg";
 import team4 from "assets/images/team-4.jpg";
 
 export default [
   {
     image: kal,
-    name: "Sophie B.",
-    description: "Hi! I need more information..",
+    name: "Demo User (You)",
+    description: "",
     action: {
       type: "internal",
       route: "/pages/profile/profile-overview",
       color: "info",
-      label: "reply",
+      label: "",
     },
   },
   {
-    image: marie,
-    name: "Anne Marie",
-    description: "Awesome work, can you..",
+    image: Aaron,
+    name: "Aaron Verst",
+    description: "",
     action: {
       type: "internal",
       route: "/pages/profile/profile-overview",
       color: "info",
-      label: "reply",
+      label: "message",
     },
   },
   {
-    image: ivana,
-    name: "Ivanna",
-    description: "About files I can..",
+    image: Ryan,
+    name: "Ryan Gengler",
+    description: "",
     action: {
       type: "internal",
       route: "/pages/profile/profile-overview",
       color: "info",
-      label: "reply",
+      label: "message",
     },
   },
   {
     image: team4,
-    name: "Peterson",
-    description: "Have a great afternoon..",
+    name: "Mario Eid",
+    description: "",
     action: {
       type: "internal",
       route: "/pages/profile/profile-overview",
       color: "info",
-      label: "reply",
-    },
-  },
-  {
-    image: team3,
-    name: "Nick Daniel",
-    description: "Hi! I need more information..",
-    action: {
-      type: "internal",
-      route: "/pages/profile/profile-overview",
-      color: "info",
-      label: "reply",
+      label: "message",
     },
   },
 ];

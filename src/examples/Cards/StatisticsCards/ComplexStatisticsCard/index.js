@@ -15,7 +15,7 @@ Coded by www.creative-tim.com
 
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
-
+import "./index.css"
 // @mui material components
 import Card from "@mui/material/Card";
 import Divider from "@mui/material/Divider";
@@ -46,8 +46,8 @@ function ComplexStatisticsCard({ color, title, count, percentage, icon }) {
             {icon}
           </Icon>
         </MDBox>
-        <MDBox textAlign="right" lineHeight={1.25}>
-          <MDTypography variant="button" fontWeight="light" color="text">
+        <MDBox textAlign="right" lineHeight={1.25} classname="blah">
+          <MDTypography variant="button" fontWeight="light" color="text" >
             {title}
           </MDTypography>
           <MDTypography variant="h4">{count}</MDTypography>

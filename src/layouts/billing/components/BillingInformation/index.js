@@ -28,30 +28,31 @@ function BillingInformation() {
     <Card id="delete-account">
       <MDBox pt={3} px={2}>
         <MDTypography variant="h6" fontWeight="medium">
-          Billing Information
+          Redeemables
         </MDTypography>
       </MDBox>
       <MDBox pt={1} pb={2} px={2}>
         <MDBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
           <Bill
-            name="oliver liam"
-            company="viking burrito"
-            email="oliver@burrito.com"
-            vat="FRB1235476"
+            name="Extra credit point +1"
+            company="UI Interface 1"
+            email="Professor: Jillian Aurisano"
+            vat="Cost: 100 points"
           />
           <Bill
-            name="lucas harper"
-            company="stone tech zone"
-            email="lucas@stone-tech.com"
-            vat="FRB1235476"
+            name="HW Drop"
+            company="Parrallel Computing"
+            email="Professor: Fred Annexstein"
+            vat="Cost: 100 points"
           />
           <Bill
-            name="ethan james"
-            company="fiber notion"
-            email="ethan@fiber.com"
-            vat="FRB1235476"
+            name="Quiz Drop"
+            company="Senior Design"
+            email="Professor: Jillian Aurisano"
+            vat="Cost: 150 points"
             noGutter
           />
+
         </MDBox>
       </MDBox>
     </Card>

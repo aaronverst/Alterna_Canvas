@@ -1,17 +1,5 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.1.0
-=========================================================
+/* eslint-disable */
 
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 
 import { useState } from "react";
 
@@ -48,9 +36,9 @@ function Notifications() {
 
   const alertContent = (name) => (
     <MDTypography variant="body2" color="white">
-      A simple {name} alert with{" "}
+      {name} was posted for {" "}
       <MDTypography component="a" href="#" variant="body2" fontWeight="medium" color="white">
-        an example link
+        Automata
       </MDTypography>
       . Give it a click if you like.
     </MDTypography>
@@ -60,7 +48,7 @@ function Notifications() {
     <MDSnackbar
       color="success"
       icon="check"
-      title="Material Dashboard"
+      title="Automata"
       content="Hello, world! This is a notification message"
       dateTime="11 mins ago"
       open={successSB}
@@ -118,75 +106,38 @@ function Notifications() {
           <Grid item xs={12} lg={8}>
             <Card>
               <MDBox p={2}>
-                <MDTypography variant="h5">Alerts</MDTypography>
+                <MDTypography variant="h5">Recent History</MDTypography>
               </MDBox>
               <MDBox pt={2} px={2}>
-                <MDAlert color="primary" dismissible>
-                  {alertContent("primary")}
-                </MDAlert>
-                <MDAlert color="secondary" dismissible>
-                  {alertContent("secondary")}
+                <MDAlert color="success" dismissible>
+                  {alertContent("Assignment 5")}
                 </MDAlert>
                 <MDAlert color="success" dismissible>
-                  {alertContent("success")}
+                  {alertContent("Quiz 5")}
+                </MDAlert>
+                <MDAlert color="success" dismissible>
+                  {alertContent("Assignment 4")}
                 </MDAlert>
                 <MDAlert color="error" dismissible>
-                  {alertContent("error")}
+                  {alertContent("Quiz 6")}
                 </MDAlert>
-                <MDAlert color="warning" dismissible>
-                  {alertContent("warning")}
+                <MDAlert color="error" dismissible>
+                  {alertContent("Assignment 6")}
                 </MDAlert>
-                <MDAlert color="info" dismissible>
-                  {alertContent("info")}
+                <MDAlert color="error" dismissible>
+                  {alertContent("Assignment 7")}
                 </MDAlert>
-                <MDAlert color="light" dismissible>
-                  {alertContent("light")}
+                <MDAlert color="error" dismissible>
+                  {alertContent("Quiz 7")}
                 </MDAlert>
-                <MDAlert color="dark" dismissible>
-                  {alertContent("dark")}
+                <MDAlert color="error" dismissible>
+                  {alertContent("Quiz 8")}
                 </MDAlert>
               </MDBox>
             </Card>
           </Grid>
 
-          <Grid item xs={12} lg={8}>
-            <Card>
-              <MDBox p={2} lineHeight={0}>
-                <MDTypography variant="h5">Notifications</MDTypography>
-                <MDTypography variant="button" color="text" fontWeight="regular">
-                  Notifications on this page use Toasts from Bootstrap. Read more details here.
-                </MDTypography>
-              </MDBox>
-              <MDBox p={2}>
-                <Grid container spacing={3}>
-                  <Grid item xs={12} sm={6} lg={3}>
-                    <MDButton variant="gradient" color="success" onClick={openSuccessSB} fullWidth>
-                      success notification
-                    </MDButton>
-                    {renderSuccessSB}
-                  </Grid>
-                  <Grid item xs={12} sm={6} lg={3}>
-                    <MDButton variant="gradient" color="info" onClick={openInfoSB} fullWidth>
-                      info notification
-                    </MDButton>
-                    {renderInfoSB}
-                  </Grid>
-                  <Grid item xs={12} sm={6} lg={3}>
-                    <MDButton variant="gradient" color="warning" onClick={openWarningSB} fullWidth>
-                      warning notification
-                    </MDButton>
-                    {renderWarningSB}
-                  </Grid>
-                  <Grid item xs={12} sm={6} lg={3}>
-                    <MDButton variant="gradient" color="error" onClick={openErrorSB} fullWidth>
-                      error notification
-                    </MDButton>
-                    {renderErrorSB}
-                  </Grid>
-                </Grid>
-              </MDBox>
-            </Card>
-          </Grid>
+
         </Grid>
       </MDBox>
       <Footer />

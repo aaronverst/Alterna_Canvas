@@ -41,21 +41,21 @@ function DefaultInfoCard({ color, icon, title, description, value }) {
           borderRadius="lg"
           variant="gradient"
         >
-          <Icon fontSize="default">{icon}</Icon>
+          <Icon fontSize="40px" marginBottom="20px">{icon}</Icon>
         </MDBox>
       </MDBox>
       <MDBox pb={2} px={2} textAlign="center" lineHeight={1.25}>
-        <MDTypography variant="h6" fontWeight="medium" textTransform="capitalize">
+        <MDTypography variant="h6" fontWeight="medium" textTransform="capitalize" fontSize="30px" >
           {title}
-        </MDTypography>
+        </MDTypography >
         {description && (
-          <MDTypography variant="caption" color="text" fontWeight="regular">
+          <MDTypography variant="caption" color="text" fontWeight="medium" fontSize="30px" marginTop="20px" >
             {description}
           </MDTypography>
         )}
         {description && !value ? null : <Divider />}
         {value && (
-          <MDTypography variant="h5" fontWeight="medium">
+          <MDTypography variant="h5" fontWeight="medium" fontSize="30px">
             {value}
           </MDTypography>
         )}

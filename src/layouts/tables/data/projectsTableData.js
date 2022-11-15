@@ -1,19 +1,5 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/function-component-definition */
-/**
-=========================================================
-* Material Dashboard 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 
 import { Link } from "react-router-dom";
 
@@ -55,7 +41,7 @@ export default function data() {
 
     rows: [
       {
-        class: <Link to="/classes"><Project name="User Interface I (CS5167)" /></Link>,
+        class: <Link to="/UserInterface"><Project name="User Interface I (CS5167)" /></Link>,
         professor: (
           <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
             Jillian Aurisano
@@ -70,7 +56,7 @@ export default function data() {
 
       },
       {
-        class: <Project name="CS Senior Design I (CS5001)" />,
+        class: <Link to="/SeniorDesign"><Project name="CS Senior Design I (CS5001)" /></Link>,
         professor: (
           <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
             Fred Annexstein
@@ -84,7 +70,7 @@ export default function data() {
         ),
       },
       {
-        class: <Project name="Automata (CS5170)" />,
+        class: <Link to="/Automata"><Project name="Automata (CS5170)" /></Link>,
         professor: (
           <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
             Badri Vellambi
@@ -98,7 +84,7 @@ export default function data() {
         ),
       },
       {
-        class: <Project name="Parallel Computing (CS5168)" />,
+        class: <Link to="/ParallelComputing"><Project name="Parallel Computing (CS5168)" /></Link>,
         professor: (
           <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
             Fred Annexstein
@@ -112,7 +98,7 @@ export default function data() {
         ),
       },
       {
-        class: <Project name="Mid-Curricular Co-op Community (PD2050)" />,
+        class: <Link to="/MidCurricularCoop"><Project name="Mid-Curricular Co-op Community (PD2050)" /></Link>,
         professor: (
           <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
             Christine Tonnis

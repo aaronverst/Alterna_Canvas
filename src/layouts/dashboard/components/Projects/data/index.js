@@ -25,16 +25,18 @@ import MDButton from "components/MDButton";
 import MDSnackbar from "components/MDSnackbar";
 
 // Images
-import logoXD from "assets/images/small-logos/logo-xd.svg";
-import logoAtlassian from "assets/images/small-logos/logo-atlassian.svg";
+import uiLogo from "assets/images/UI_Icon.png";
+import pcLogo from "assets/images/PC_Icon.png";
 import logoSlack from "assets/images/small-logos/logo-slack.svg";
-import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
-import logoJira from "assets/images/small-logos/logo-jira.svg";
-import logoInvesion from "assets/images/small-logos/logo-invision.svg";
+import ucLogo from "assets/images/UC_Logo.png";
+// import logoJira from "assets/images/small-logos/logo-jira.svg";
+// import logoInvesion from "assets/images/small-logos/logo-invision.svg";
+
+import { Link } from "react-router-dom";
 
 export default function data() {
   const [successSB, setSuccessSB] = useState(false);
-  const openSuccessSB = () => setSuccessSB(true);
+  // const openSuccessSB = () => setSuccessSB(true);
   const closeSuccessSB = () => setSuccessSB(false);
 
   const renderSuccessSB = (
@@ -65,12 +67,12 @@ export default function data() {
       { Header: "Assignments", accessor: "companies", width: "45%", align: "left" },
       { Header: "Class", accessor: "members", width: "10%", align: "left" },
       { Header: "Due Date", accessor: "budget", align: "center" },
-      { Header: "Submission Status", accessor: "completion", align: "center" },
+      { Header: "", accessor: "completion", align: "center" },
     ],
 
     rows: [
       {
-        companies: <Company image={logoXD} name="Project 2" />,
+        companies: <Company image={uiLogo} name="Project 2" />,
         members: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
             User Interface 1
@@ -85,9 +87,11 @@ export default function data() {
           <MDBox p={2}>
             <Grid container spacing={3}>
               <Grid item xs={30} sm={20} lg={10}>
-                <MDButton variant="gradient" color="success" onClick={openSuccessSB} fullWidth>
-                  Submit
-                </MDButton>
+                <Link to="/project2">
+                  <MDButton variant="gradient" color="success" fullWidth>
+                    View Assignment
+                  </MDButton>
+                </Link>
                 {renderSuccessSB}
               </Grid>
             </Grid>
@@ -95,7 +99,7 @@ export default function data() {
         ),
       },
       {
-        companies: <Company image={logoAtlassian} name="Module 12 Quiz - Monte Carlo Simulation" />,
+        companies: <Company image={pcLogo} name="Module 12 Quiz - Monte Carlo Simulation" />,
         members: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
             Parrallel Computing
@@ -110,9 +114,11 @@ export default function data() {
           <MDBox p={2}>
             <Grid container spacing={3}>
               <Grid item xs={30} sm={20} lg={10}>
-                <MDButton variant="gradient" color="success" onClick={openSuccessSB} fullWidth>
-                  Submit
-                </MDButton>
+                <Link to="/module12Quiz">
+                  <MDButton variant="gradient" color="success" fullWidth>
+                    View Assignment
+                  </MDButton>
+                </Link>
                 {renderSuccessSB}
               </Grid>
             </Grid>
@@ -135,9 +141,11 @@ export default function data() {
           <MDBox p={2}>
             <Grid container spacing={3}>
               <Grid item xs={30} sm={20} lg={10}>
-                <MDButton variant="gradient" color="success" onClick={openSuccessSB} fullWidth>
-                  Submit
-                </MDButton>
+                <Link to="/assignment4">
+                  <MDButton variant="gradient" color="success" fullWidth>
+                    View Assignment
+                  </MDButton>
+                </Link>
                 {renderSuccessSB}
               </Grid>
             </Grid>
@@ -145,7 +153,7 @@ export default function data() {
         ),
       },
       {
-        companies: <Company image={logoSpotify} name="Assignment #10 - Final Report" />,
+        companies: <Company image={ucLogo} name="Assignment #10 - Final Report" />,
         members: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
             Senior Design
@@ -160,9 +168,11 @@ export default function data() {
           <MDBox p={2}>
             <Grid container spacing={3}>
               <Grid item xs={30} sm={20} lg={10}>
-                <MDButton variant="gradient" color="success" onClick={openSuccessSB} fullWidth>
-                  Submit
-                </MDButton>
+                <Link to="/assignment10">
+                  <MDButton variant="gradient" color="success" fullWidth>
+                    View Assignment
+                  </MDButton>
+                </Link>
                 {renderSuccessSB}
               </Grid>
             </Grid>
@@ -170,7 +180,7 @@ export default function data() {
         ),
       },
       {
-        companies: <Company image={logoJira} name="Final Projects" />,
+        companies: <Company image={pcLogo} name="Final Projects" />,
         members: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
             Parrallel Computing
@@ -185,16 +195,18 @@ export default function data() {
           <MDBox p={2}>
             <Grid container spacing={3}>
               <Grid item xs={30} sm={20} lg={10}>
-                <MDButton variant="gradient" color="success" onClick="window.location = /notifications" fullWidth>
-                  Submit
-                </MDButton>
+                <Link to="/finalProjects">
+                  <MDButton variant="gradient" color="success" fullWidth>
+                    View Assignment
+                  </MDButton>
+                </Link>
               </Grid>
             </Grid>
           </MDBox>
         ),
       },
       {
-        companies: <Company image={logoInvesion} name="Assignment #11 - Advisor Assessments" />,
+        companies: <Company image={ucLogo} name="Assignment #11 - Advisor Assessments" />,
         members: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
             Senior Design
@@ -209,9 +221,11 @@ export default function data() {
           <MDBox p={2}>
             <Grid container spacing={3}>
               <Grid item xs={30} sm={20} lg={10}>
-                <MDButton variant="gradient" color="success" onClick={openSuccessSB} fullWidth>
-                  Submit
-                </MDButton>
+                <Link to="/assignment11">
+                  <MDButton variant="gradient" color="success" fullWidth>
+                    View Assignment
+                  </MDButton>
+                </Link>
                 {renderSuccessSB}
               </Grid>
             </Grid>

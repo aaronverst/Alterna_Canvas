@@ -31,13 +31,11 @@ function Overview() {
       </div>
       <nav className='app__navbar'>
         <ul className='app__navbar-links'>
-          <div>
-            <li className='p__opensans'><a href='#home'>Search The Canvas Guide</a></li>
-          </div>
-          <li className='p__opensans'><a href='#about'>IT @UC Knowledge Base</a></li>
-          <li className='p__opensans'><a href='#menu'>Menu</a></li>
-          <li className='p__opensans'><a href='#awards'>Awards</a></li>
-          <li className='p__opensans'><a href='#contact'>Contact</a></li>
+          <li className='p__opensans'><a href='#home ' style={{ color: "#4E1703" }} >Search The Canvas Guide</a></li>
+          <li className='p__opensans'><a href='https://cases.canvaslms.com/liveagentchat?chattype=student' style={{ color: "#4E1703" }} >IT @UC Knowledge Base</a></li>
+          <li className='p__opensans'><a href='#menu' style={{ color: "#4E1703" }} >Chat with Canvas Support(Students)</a></li><span className="p__opensan" style={{ color: "#333333" }}> Chat with Canvas Live Support! </span>
+          <li className='p__opensans'><a href='#awards' style={{ color: "#4E1703" }} >Canvas Support Hotline</a></li> <span className="p__opensan" style={{ color: "#333333" }}> 1 (855) 745-4413 </span>
+          <li className='p__opensans'><a href='#contact' style={{ color: "#4E1703" }} >Chat with Canvas Support(Faculty)</a></li><span className="p__opensan" style={{ color: "#333333" }}> Chat with Canvas Live Support! </span>
         </ul>
       </nav>
     </DashboardLayout>
